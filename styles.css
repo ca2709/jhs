@@ -1,21 +1,55 @@
-* :not(.omit){
-    justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Playwrite+AU+NSW:wght@100..400&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=SUSE:wght@100..800&family=Tangerine:wght@400;700&display=swap');
+.playwrite-au-nsw {
+  font-family: "Playwrite AU NSW", cursive;
+  font-optical-sizing: auto;
+  font-weight: 590;
+  font-style: normal;
 }
 
-.top{
-    text-align:center;
+html{
+    background-color:whitesmoke;
+    font-family:suse;
+	text-align:center;
+}
+
+* {
+    margin-left:0%;
+    margin-right: 0%;
+}
+
+.alert{
+    margin-bottom:auto;
+    margin-top:auto;
 }
 
 .container {
     display:flex;
     align-items:center;
-    gap: 1.2rem;
+    row-gap: 1.2rem;
     margin-top: 2%;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 0%;
+    margin-right: 0%;
     list-style:none;
+    margin-bottom:unset;
+    background-color: darkgray;
+    border: thick solid darkgray;
 }
 
+img :not(.logo){
+    position: absolute;
+    top:0;
+    left:0;
+    width:200%;
+    height:auto;
+}
+
+.include{
+    background-image: url('index-header.jpg');
+}
+
+.include > h1{
+    color:white;
+}
 .container :not(h3,img){
     justify-content: space-evenly;
     margin: 10px;
@@ -31,15 +65,15 @@
 
 h1 {
   font-weight: inherit;
-  font-size: 1.6vw;
+  font-size: 25px;
 }
 h2 {
   font-weight: inherit;
-  font-size: 1.4vw;
+  font-size: medium;
 }
 h3 {
   font-weight: inherit;
-  font-size: 1.2vw;
+  font-size: medium;
 }
 p {
   font-weight: inherit;
@@ -50,7 +84,7 @@ p {
     font-weight: bolder;  
 }
 
-@media (max-width:1135px){
+@media (max-width:1100px){
     /*add scrollbar
      * change font size to responsive*/
     .header :not(img,title) {
