@@ -1,0 +1,78 @@
+* :not(.omit){
+    justify-content: center;
+}
+
+.top{
+    text-align:center;
+}
+
+.container {
+    display:flex;
+    align-items:center;
+    gap: 1.2rem;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+    list-style:none;
+}
+
+.container :not(h3,img){
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.container >a{
+    flex-grow:1;
+    justify-content: space-evenly;
+}
+.block{
+    justify-content: space-evenly;
+}
+
+h1 {
+  font-weight: inherit;
+  font-size: 1.6vw;
+}
+h2 {
+  font-weight: inherit;
+  font-size: 1.4vw;
+}
+h3 {
+  font-weight: inherit;
+  font-size: 1.2vw;
+}
+p {
+  font-weight: inherit;
+  font-size: vw;
+}
+
+.title {
+    font-weight: bolder;  
+}
+
+@media (max-width:1135px){
+    /*add scrollbar
+     * change font size to responsive*/
+    .header :not(img,title) {
+        white-space: nowrap;
+        overflow-x: auto;
+        width: inhert;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .header::webkit-scrollbar{
+        width: 0;
+        height: 0;
+    }
+    
+    img{
+        overflow-x:unset;
+    }
+    .header > .title{
+        overflow-x:unset;
+    }
+    .header > .container {
+        overflow:scroll;
+    }
+    
+}
