@@ -9,16 +9,24 @@
 html{
     background-color:whitesmoke;
     font-family:suse;
-	text-align:center;
+    color:#120b17;
 }
 
 * {
     margin-left:0%;
     margin-right: 0%;
+    justify-content:center;
+}
+.scroller{
+    display:none;
+}
+
+.top{
+    text-align:center;
 }
 
 .alert{
-    margin-bottom:auto;
+    margin-bottom:unset;
     margin-top:auto;
 }
 
@@ -26,7 +34,7 @@ html{
     display:flex;
     align-items:center;
     row-gap: 1.2rem;
-    margin-top: 2%;
+    margin-top: inherit;
     margin-left: 0%;
     margin-right: 0%;
     list-style:none;
@@ -43,12 +51,9 @@ img :not(.logo){
     height:auto;
 }
 
-.include{
-    background-image: url('index-header.jpg');
-}
-
 .include > h1{
     color:white;
+    filter: drop-shadow(3px 2px #5a525f);
 }
 .container :not(h3,img){
     justify-content: space-evenly;
@@ -84,7 +89,16 @@ p {
     font-weight: bolder;  
 }
 
-@media (max-width:1100px){
+article{
+    margin:20px;
+    font-size:large;
+}
+
+hr{
+    color:#120b17;
+}
+
+@media (max-width:1050px){
     /*add scrollbar
      * change font size to responsive*/
     .header :not(img,title) {
@@ -108,5 +122,25 @@ p {
     .header > .container {
         overflow:scroll;
     }
+    .container{
+        padding-right:9px;
+    }
+    .scroller{
+        display:unset;
+        transform: translate(48.5vw);
+        margin:unset;
+        padding:unset;
+        position:absolute;
+    }
     
+}
+
+@media (max-width:500px){
+    .include{
+        height:45vh;
+    }
+    
+    .include > .line-top{
+        margin-top:50%;
+    }
 }
